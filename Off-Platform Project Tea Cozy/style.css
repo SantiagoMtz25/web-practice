@@ -1,0 +1,222 @@
+/* I used pixels to copy as exact as possible the design 
+provided, however I encourage to use a relative unit such
+as rem or em. */
+
+:root {
+  --clr-details: seashell;
+  --clr-background: black;
+  --ft-size: 22px;
+  --ff-sans: 'Helvetica', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: var(--ff-sans);
+  color: white;
+}
+
+body {
+  margin: 0;
+  background-color: var(--clr-background);
+  opacity: 0.9;
+}
+
+/* Top Nav Bar content */
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 69px;
+  border-bottom: 1px solid var(--clr-details);
+  background-color: var(--clr-background);
+}
+
+header img {
+  max-height: 50px;
+  margin-left: 10px;
+}
+
+header nav ul {
+  display: inline-flex;
+  gap: 20px;
+  font-size: var(--ft-size);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a:link {
+  color: white;
+}
+
+header nav ul li a:visited{
+  color: white;
+}
+
+/* Main page content */
+main {
+  padding-top: 69px;
+}
+
+/* Mission section */
+.mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  border: 1px dashed red;
+  width: 1200px; 
+  height: 700px;
+  background-image: url('img-mission-background.jpg');
+}
+
+.mission-content {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-text {
+  text-align: center;
+  width: 1200px;
+  height: auto;
+  background-color: var(--clr-background);
+}
+
+.mission-text h2 {
+  font-size: 2.5em;
+  margin-block: 10px;
+}
+
+.mission-text h4 {
+  font-size: 1.5em;
+  margin-block: 10px;
+}
+
+/* Tea of the Month section */
+.month-tea {  
+  border: 1px dashed yellow;
+  margin-block: 80px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.month-tea h2 {
+  font-size: 2.5em;
+  margin-block: 10px;
+}
+
+.month-tea h4 {
+  font-size: 1.5em;
+  margin-block: 10px;
+}
+
+.month-tea .images {
+  border: 1px dashed red;
+  max-width: 1000px;
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.month-tea .images .img-card img {
+  width: 300px;
+  height: 200px;
+}
+
+.month-tea .images .img-card h5 {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+/* Locations section */
+.locations {
+  border: 1px dashed green;
+  margin-top: 80px;
+  margin-inline: 40px;
+  text-align: center;
+  background-image: url('img-locations-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
+}
+
+.locations h2 {
+  font-size: 2.5em;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.location-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 40px;  
+  margin-bottom: 10px;
+}
+
+.location-flexbox .location-card > * {
+  margin-block: 25px;
+}
+
+.location-flexbox .location-card {
+  border: 1px dashed blue;
+  width: 300px;
+  background-color: var(--clr-background);
+  padding: 10px;
+}
+
+.location-flexbox .location-card h4 {
+  font-size: em;
+}
+
+.location-flexbox .location-card p {
+  font-size: 1.5em;
+}
+
+/* Contact Section */
+.contact {
+  border: 1px dashed purple;
+  text-align: center;
+  min-height: 200px;
+}
+
+.contact h2 {
+  font-size: 2.5em;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.contact h5 {
+  font-size: 1sem;
+  margin-block: 25px;
+}
+
+/* Footer */
+footer {
+  margin-left: 20px;
+  text-align: left;
+  margin-block: 20px;
+}
+
