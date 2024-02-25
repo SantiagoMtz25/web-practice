@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --cl-violet: hsl(257, 40%, 49%);
+  --cl-soft-magenta: hsl(300, 69%, 71%);
+  --cl-white: hsl(0, 0%, 100%);
+  --ff-poppins: 'Poppins', sans-serif;
+  --ff-open-sans: 'Open Sans', sans-serif;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--cl-violet);
+  background-image: url('./images/bg-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Cover the entire page */
+  background-position: center;
+  /* Center the background */
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.2rem 4.1rem;
+}
+
+header .logo {
+  width: 15%;
+}
+
+header .logo img {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1.5rem;
+}
+
+section .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  padding-top: 3.3rem;
+  width: 100%;
+  height: 100%;
+}
+
+section img {
+  width: 90%;
+  height: auto;
+  align-self: center;
+  justify-self: center;
+}
+
+section .content h1 {
+  width: 90%;
+  font-family: var(--ff-poppins);
+  font-size: 2.5rem;
+  font-weight: var(--fw-semi-bold);
+  color: var(--cl-white);
+  margin-bottom: 1rem;
+}
+
+section .content p {
+  width: 100%;
+  font-family: var(--ff-open-sans);
+  font-size: 1.3rem;
+  font-weight: var(--fw-regular);
+  color: var(--cl-white);
+  line-height: 1.2;
+  margin-bottom: 1.8rem;
+}
+
+section .content button {
+  background-color: var(--cl-white);
+  color: var(--cl-violet);
+  border: none;
+  border-radius: 3rem;
+  padding: 0.7rem 4rem;
+  font-family: var(--ff-open-sans);
+  font-size: 1.1rem;
+  font-weight: var(--fw-regular);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.75);
+  transition: background-color 0.5s ease-out;
+}
+
+section .content button:hover {
+  background-color: var(--cl-soft-magenta);
+  color: var(--cl-white);
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-self: center;
+  padding-right: 3rem;
+
+}
+
+footer .social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+}
+
+footer a {
+  color: var(--cl-white);
+  cursor: pointer;
+  border: 1px solid var(--cl-white);
+  border-radius: 50%;
+  width: 30px;
+  /* Example size, adjust based on your design */
+  height: 30px;
+  /* Same as width for a perfect circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  /* Optional: Removes underline from links */
+  transition: all 0.5 ease-out;
+}
+
+footer a:hover {
+  border: 1px solid var(--cl-soft-magenta);
+  color: var(--cl-soft-magenta);
+}
+
+footer a i {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+    padding: 1.3rem 2.1rem;
+  }
+
+  header .logo {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header .logo {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body,
+  html {
+    height: auto;
+    overflow-y: visible;
+  }
+  body {
+    background-image: url('./images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+  }
+  header {
+    padding: 2rem 2.1rem;
+  }
+  header .logo {
+    width: 40%;
+  }
+  section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  section .content {
+    padding: 1.5rem;
+    padding-top: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  section .content h1 {
+    width: 100%;
+    font-size: 2.3rem;
+  }
+  section .content p {
+    width: 90%;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  section .content button {
+    padding: 0.7rem 5rem;
+    margin-bottom: 3rem;
+  }
+  footer {
+    padding-right: 0;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+}
